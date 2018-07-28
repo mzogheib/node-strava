@@ -1,0 +1,4 @@
+{
+  "baseApiUrl": "https://www.strava.com/api/v3",
+  "baseOauthUrl": "https://www.strava.com/oauth"
+}
