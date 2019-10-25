@@ -3,7 +3,7 @@ const http = require('../../http');
 const { baseOauthUrl } = require('../config');
 
 const url = ({ client_id, redirect_uri }) => {
-  const params = { client_id, redirect_uri, response_type: 'code', scope: 'read_all' };
+  const params = { client_id, redirect_uri, response_type: 'code', scope: 'read,read_all,activity:read_all' };
   return `${baseOauthUrl}/authorize?${querystring.stringify(params)}`;
 }
 
