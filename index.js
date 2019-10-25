@@ -7,6 +7,7 @@ module.exports = class NodeStrava {
     this.oauth = {
       url: () => oauth.url({ client_id, redirect_uri }),
       token: ({ code }) => oauth.token({ code, client_id, client_secret, redirect_uri }),
+      refresh: ({ refresh_token }) => oauth.refresh({ refresh_token, client_id, client_secret }),
       deauthorize: ({ access_token }) => oauth.deauthorize({ access_token })
     }
     this.athlete = athlete;
